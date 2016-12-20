@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EthStarter</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>EthStarter</h1>
+    <span id="status"></span>
+  <h3>You have <span class="black"><span id="balance"></span> ETH</span> to invest</h3>
+
+  <br>
+  <h1>Projects</h1>
+  <input id="refresh_projects" type="button" value="Refresh" onclick="refreshProjectList();" />
+
+  <div id="new_project_block">
+    <div class="field_group" id="name_field_group">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="e.g., My Project"></input>
+    </div>
+    <div class="field_group" id="goal_field_group">
+      <label for="goal">Goal:</label>
+      <input type="number" id="goal" name="goal" min="1" placeholder="Project goal e.g., 50">
+      <div class="switch">
+        <input id="eth-wei-toggle-create" class="eth-wei-toggle" type="checkbox">
+        <div class="eth-wei-toggle-buttons">
+          <label for="eth-wei-toggle-create" class="eth-wei-toggle-but eth-wei-toggle-but-left eth-wei-toggle-wei">Wei</label>
+          <label for="eth-wei-toggle-create" class="eth-wei-toggle-but eth-wei-toggle-but-right eth-wei-toggle-eth">Eth</label>
+        </div>
+      </div>
+    </div>
+    <div class="field_group" id="deadline_field_group">
+      <label for="deadline">Deadline:</label>
+          <input style="width:5em;" class="form-control" name="y" type="number" id="y" size="4" maxlength="4" placeholder="YYYY">
+-
+          <input style="width:5em;" class="form-control" name="m" type="number" id="m" size="2" maxlength="2" min="1" max="12" placeholder="MM">
+-
+          <input style="width:3em;" class="form-control" name="d" type="number" id="d" size="2" maxlength="2" min="1" max="31" placeholder="DD">
+          @
+          <input style="width:3em;" class="form-control" name="hours" type="number" id="m22" size="2" maxlength="2" min="0" max="23" placeholder="HH">
+          :
+          <input style="width:3em;" class="form-control" name="min" type="number" id="min" ize="2" maxlength="2" min="0" max="59" placeholder="MM">
+          :
+          <input style="width:3em;" class="form-control" name="sec" type="number" id="sec" size="2" maxlength="2" min="0" max="59" placeholder="SS">
+          (24h:min:sec)
+          <input id="refresh_deadline" type="button" class="small-button" value="Now" onclick="fillDeadlineFieldWithNow();" />
+    </div>
+    <input id="create_project_button" type="button" value="Create" onclick="submitCreateProjectForm();" />
+  </div>
+
+  <table id="projects-table">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Current</td>
+        <td>Goal</td>
+        <td>Deadline</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody id="projects">
+
+    </tbody>
+  </table>
+</body>
+</html>

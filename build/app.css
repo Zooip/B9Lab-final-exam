@@ -1,0 +1,120 @@
+
+
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+  font-family: "Open Sans", sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input {
+  width: 500px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.small-button {
+  font-size: 14px;
+  padding: 3px;
+  width: auto;
+}
+
+h1, h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #AAA;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: normal;
+  color: #AAA;
+  font-size: 24px;
+}
+
+.black {
+  color: black;
+}
+
+#balance {
+  color: black;
+}
+
+#projects-table td {
+  padding-left: 10px; 
+  padding-right: 10px;
+}
+
+
+thead {
+  font-weight: bold;
+}
+
+#projects .address{
+    font-size: 0.7em;
+}
+
+.switch, .eth-wei-toggle-buttons{
+  display: inline-block;
+}
+
+.eth-wei-toggle-but{
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  width: unset;
+}
+
+.eth-wei-toggle + .eth-wei-toggle-buttons .eth-wei-toggle-but-left{
+  background-color: #2196F3;
+}
+
+.eth-wei-toggle + .eth-wei-toggle-buttons .eth-wei-toggle-but-right{
+  background-color: #ccc;
+}
+
+.eth-wei-toggle:checked + .eth-wei-toggle-buttons .eth-wei-toggle-but-left{
+  background-color: #ccc;
+}
+
+.eth-wei-toggle:checked + .eth-wei-toggle-buttons .eth-wei-toggle-but-right{
+  background-color: #2196F3;
+}
+
+
+.eth-wei-toggle-but-left{
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  padding-left: 10px
+}
+
+.eth-wei-toggle-but-right{
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  padding-right: 10px
+}
+
+
+.eth-wei-toggle {
+  display: none;
+}
+
+.contribute-value-field {
+  width: 100px;
+}
